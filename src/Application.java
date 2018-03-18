@@ -10,7 +10,7 @@ public class Application {
         List<Integer> numbersArrayList = new ArrayList<>(Arrays.asList(1, 3, 5, 20, 21, 58, 113, 125, 130, 150, 151, 168, 170, 171, 179, 193, 200, 205, 209, 211, 236, 240, 315, 352, 379, 381, 397));
         long start;
         long stop;
-        String timeElapsed;
+        int y;
 
         System.out.println("##Efficiency testing##\n\n");
 
@@ -21,8 +21,7 @@ public class Application {
             System.out.print(numbersArray[i] + ", ");
         }
         stop = getCurrentTime();
-        timeElapsed = getTimeElapsed(start, stop);
-        System.out.println(timeElapsed);
+        System.out.println(getTimeElapsed(start, stop));
         //</editor-fold>
 
         //<editor-fold desc="Array numbers - for-each loop")
@@ -32,8 +31,19 @@ public class Application {
             System.out.print(i + ", ");
         }
         stop = getCurrentTime();
-        timeElapsed = getTimeElapsed(start, stop);
-        System.out.println(timeElapsed);
+        System.out.println(getTimeElapsed(start, stop));
+        //</editor-fold>
+
+        //<editor-fold desc="Array numbers - while loop">
+        System.out.println("Array of numbers - while loop");
+        start = getCurrentTime();
+        y = 0;
+        while(y < numbersArray.length) {
+            System.out.print(numbersArray[y] + ", ");
+            y++;
+        }
+        stop = getCurrentTime();
+        System.out.println(getTimeElapsed(start, stop));
         //</editor-fold>
 
         //<editor-fold desc="Arraylist numbers - for loop">
@@ -43,8 +53,7 @@ public class Application {
             System.out.print(numbersArrayList.get(i) + ", ");
         }
         stop = getCurrentTime();
-        timeElapsed = getTimeElapsed(start, stop);
-        System.out.println(timeElapsed);
+        System.out.println(getTimeElapsed(start, stop));
         //</editor-fold>
 
         //<editor-fold desc="Arraylist numbers - for-each loop">
@@ -54,8 +63,19 @@ public class Application {
             System.out.print(i + ", ");
         }
         stop = getCurrentTime();
-        timeElapsed = getTimeElapsed(start, stop);
-        System.out.println(timeElapsed);
+        System.out.println(getTimeElapsed(start, stop));
+        //</editor-fold>
+
+        //<editor-fold desc="Arraylist numbers - while loop">
+        System.out.println("Arraylist of numbers - while loop");
+        start = getCurrentTime();
+        y = 0;
+        while(y < numbersArrayList.size()) {
+            System.out.print(numbersArrayList.get(y) + ", ");
+            y++;
+        }
+        stop = getCurrentTime();
+        System.out.println(getTimeElapsed(start, stop));
         //</editor-fold>
 
         //<editor-fold desc="Arraylist numbers - iterator">
@@ -66,8 +86,7 @@ public class Application {
             System.out.print(it.next() + ", ");
         }
         stop = getCurrentTime();
-        timeElapsed = getTimeElapsed(start, stop);
-        System.out.println(timeElapsed);
+        System.out.println(getTimeElapsed(start, stop));
         //</editor-fold>
     }
 
