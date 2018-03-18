@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
-public class Application {
+public class EfficiencyApplication {
     public static void main(String[] args) {
         int[] numbersArray = {1, 3, 5, 20, 21, 58, 113, 125, 130, 150, 151, 168, 170, 171, 179, 193, 200, 205, 209, 211, 236, 240, 315, 352, 379, 381, 397};
         List<Integer> numbersArrayList = new ArrayList<>(Arrays.asList(1, 3, 5, 20, 21, 58, 113, 125, 130, 150, 151, 168, 170, 171, 179, 193, 200, 205, 209, 211, 236, 240, 315, 352, 379, 381, 397));
